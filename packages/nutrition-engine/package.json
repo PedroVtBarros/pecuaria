@@ -1,0 +1,16 @@
+{
+  "name": "@pecuaria/nutrition-engine",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Motor de nutrição de bovinos de corte (BR-CORTE 2023). Ver PLANO_FASE_6.md e INVENTARIO_BR_CORTE.md.",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@pecuaria/domain": "0.1.0"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  }
+}

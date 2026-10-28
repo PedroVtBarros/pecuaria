@@ -1,0 +1,13 @@
+{
+  "name": "@pecuaria/domain",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Regras de negócio puras. Sem Electron, React ou SQLite. Vazio na Fase 0.",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  }
+}

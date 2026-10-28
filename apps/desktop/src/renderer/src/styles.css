@@ -1,0 +1,114 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * Tokens de cor. Componentes usam apenas estes nomes (bg-superficie,
+ * text-texto-suave...), nunca cores literais, para o tema escuro funcionar
+ * em todo lugar.
+ */
+@theme inline {
+  --color-fundo: var(--fundo);
+  --color-superficie: var(--superficie);
+  --color-superficie-2: var(--superficie-2);
+  --color-borda: var(--borda);
+  --color-texto: var(--texto);
+  --color-texto-suave: var(--texto-suave);
+  --color-marca: var(--marca);
+  --color-marca-forte: var(--marca-forte);
+  --color-marca-suave: var(--marca-suave);
+  --color-sobre-marca: var(--sobre-marca);
+  --color-perigo: var(--perigo);
+  --color-perigo-suave: var(--perigo-suave);
+  --color-sucesso: var(--sucesso);
+  --color-sucesso-suave: var(--sucesso-suave);
+  --color-alerta: var(--alerta);
+  --color-alerta-suave: var(--alerta-suave);
+  --color-lateral: var(--lateral);
+  --color-lateral-texto: var(--lateral-texto);
+  --color-lateral-ativo: var(--lateral-ativo);
+  --color-grafico-serie: var(--grafico-serie);
+  --color-grafico-perda: var(--grafico-perda);
+  --color-grafico-grade: var(--grafico-grade);
+  --color-grafico-eixo: var(--grafico-eixo);
+  --font-sans: 'Segoe UI Variable Text', 'Segoe UI', system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: light;
+  --fundo: #f5f6f2;
+  --superficie: #ffffff;
+  --superficie-2: #eef0ea;
+  --borda: #dde1d6;
+  --texto: #1d2420;
+  --texto-suave: #5e6a61;
+  --marca: #2f6b3f;
+  --marca-forte: #245533;
+  --marca-suave: #e3efe4;
+  --sobre-marca: #ffffff;
+  --perigo: #b42318;
+  --perigo-suave: #fdecea;
+  --sucesso: #1f7a3d;
+  --sucesso-suave: #e6f4ea;
+  --alerta: #9a6700;
+  --alerta-suave: #fff6dc;
+  --lateral: #1f2a22;
+  --lateral-texto: #c9d4cb;
+  --lateral-ativo: #2f6b3f;
+  /* Gráficos: azul (peso, ganho) e laranja (perda), validados para daltonismo
+     nos dois temas. O verde da marca com laranja não passa nesse teste. */
+  --grafico-serie: #2a78d6;
+  --grafico-perda: #eb6834;
+  --grafico-grade: #e6e8e1;
+  --grafico-eixo: #c3c8bc;
+}
+
+.dark {
+  color-scheme: dark;
+  --fundo: #111613;
+  --superficie: #18201b;
+  --superficie-2: #1f2922;
+  --borda: #2c3830;
+  --texto: #e6ebe6;
+  --texto-suave: #9aa79d;
+  --marca: #5fa772;
+  --marca-forte: #7bbd8c;
+  --marca-suave: #1f3526;
+  --sobre-marca: #0d130f;
+  --perigo: #f2867c;
+  --perigo-suave: #3a1d1a;
+  --sucesso: #6cc58a;
+  --sucesso-suave: #17301f;
+  --alerta: #e8bb4f;
+  --alerta-suave: #352a10;
+  --lateral: #0c110e;
+  --lateral-texto: #aebbb1;
+  --lateral-ativo: #2b5a37;
+  --grafico-serie: #3987e5;
+  --grafico-perda: #d95926;
+  --grafico-grade: #253029;
+  --grafico-eixo: #3a473e;
+}
+
+html,
+body,
+#raiz {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--marca);
+  outline-offset: 2px;
+}
+
+dialog::backdrop {
+  background: rgb(0 0 0 / 0.45);
+}

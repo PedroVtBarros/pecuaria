@@ -1,0 +1,51 @@
+# Dependências, builds e relatórios de teste
+node_modules/
+out/
+dist/
+release/
+coverage/
+test-results/
+playwright-report/
+*.tsbuildinfo
+*.log
+
+# Bancos de dados operacionais, backups e arquivos temporários do SQLite.
+# Os dados reais ficam em %APPDATA%\GestaoPecuaria, nunca no repositório.
+*.db
+*.db-wal
+*.db-shm
+*.db-journal
+*.sqlite
+*.sqlite3
+*.parcial
+*.restaurando
+*.anterior
+backups/
+logs/
+
+# Referências bibliográficas: podem ter direito autoral. Ficam só na máquina local.
+referencias/
+
+# Dados pessoais do rebanho exportados ou importados (planilhas).
+# Arquivos de exemplo para testes ficam em pastas "fixtures" e podem ser versionados.
+*.csv
+*.xlsx
+*.xls
+*.ods
+!**/fixtures/**/*.csv
+
+# Segredos, certificados de assinatura e configurações locais
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.p12
+.claude/settings.local.json
+
+# Sistema operacional e editores
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+.idea/

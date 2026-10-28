@@ -1,0 +1,19 @@
+{
+  "name": "@pecuaria/shared-types",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Contrato tipado da API entre renderer, preload e main. Sem dependência de Electron, React ou SQLite.",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./canais": "./src/canais.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@pecuaria/domain": "0.1.0",
+    "@pecuaria/nutrition-engine": "0.0.0",
+    "zod": "4.6.7"
+  }
+}

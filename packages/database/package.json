@@ -1,0 +1,21 @@
+{
+  "name": "@pecuaria/database",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Conexão SQLite, migrations, repositórios e backup. Sem dependência de Electron ou React.",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@pecuaria/domain": "0.1.0",
+    "@pecuaria/shared-types": "0.1.0",
+    "better-sqlite3": "13.0.3"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "9.6.0"
+  }
+}
